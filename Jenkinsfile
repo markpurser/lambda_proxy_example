@@ -4,7 +4,7 @@ pipeline {
     stage('lambda-deployment') {
       steps {
         tool 'Zip'
-        sh 'sudo apt-get install zip'
+        sh 'apt-get install zip'
         sh 'zip -r function.zip lambda.js package.json'
       }
     }
