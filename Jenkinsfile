@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('lambda-deployment') {
       steps {
-        sh 'zip -r function.zip lambda.js package.json'
+        sh '''npm install
+npm test
+zip -r function.zip lambda.js package.json'''
       }
     }
   }
